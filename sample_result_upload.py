@@ -20,24 +20,24 @@ import requests
 from requests_toolbelt.multipart.encoder import MultipartEncoder
 
 BASE_URL = 'https://demo.gradientone.com'
-AUTH_TOKEN = "6ce6b59b-8332-40d3-8b74-4a381f6c8258"
+AUTH_TOKEN = '6ce6b59b-8332-40d3-8b74-4a381f6c8258'
 
 
 def get_result_data():
     """Returns a result dictionary for GradientOne API"""
     result_data = {
-        "fields": sample_helpers.get_fields_for_search_index(),
-        "result": {
-            "instrument_type": "TektronixMSO5204B",
-            "info":  sample_helpers.get_result_info(),
-            "dut": "I2C board",
-            "config": "I2C Capture",
+        'fields': sample_helpers.get_fields_for_search_index(),
+        'result': {
+            'instrument_type': 'TektronixMSO5204B',
+            'info':  sample_helpers.get_result_info(),
+            'dut': 'I2C board',
+            'config': 'I2C Capture',
         }
     }
     return result_data
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
     # collect the sample result data
     data = get_result_data()
